@@ -4,12 +4,13 @@ author: "Viren"
 date: "03/07/2021"
 output: html_document
 ---
-
 Load Libraries
 ```{r}
 library(ggplot2)
 library(dplyr)
 ```
+
+
 
 ***<font size="6"> Loading and preprocessing the data*** 
 
@@ -57,7 +58,6 @@ print(paste("The median is: ", medianWithNa))
 ```
 
 
-
 ***<font size="6">What is the average daily activity pattern?***
 
 
@@ -85,7 +85,6 @@ plot(stepsbyInterval$meansteps ~ stepsbyInterval$interval,
 ```{r,echo=TRUE}
 print(paste("Interval containing the most steps on average: ",stepsbyInterval$interval[which.max(stepsbyInterval$meansteps)]))
 ```
-
 
 
 ***<font size="6">Imputing missing values***
@@ -153,7 +152,6 @@ Compare <- data.frame(mean = c(meanWithNa,meanWithNewNaValues),median = c(median
 rownames(Compare) <- c("With NA Values", "With New NA Values")
 print(Compare)
 ```
-
 
 
 ***<font size="6">Are there differences in activity patterns between weekdays and weekends?***
